@@ -20,7 +20,7 @@
     {
     	"Topic": "Check tasks",
     	"Tasks": [
-    		"docker stack ps ss-kcp"
+    		"docker stack ps --no-trunc ss-kcp"
       	]
     },
     {

@@ -1,4 +1,5 @@
 # sskcp-server-deployment
+
 Deploy sskcp-server-x86 on multiple machines
 
 ### Preparation 
@@ -35,13 +36,13 @@ git clone https://github.com/meninasx86/sskcp-server-deployment.git
 * Install packages
 
 ```
-./install_packages.sh
+./install_package.sh
 
 ```
 
 * Fill in swarm manager login info 
 
-If login manager with username and password, please fill in manager_USER.json
+If login manager with username and password, please fill in `machine/manager_USER.json`
 
 An example of manager_USER.json
 
@@ -57,7 +58,7 @@ An example of manager_USER.json
   ]
 ~    
 ```
-If login manager with ssh key, please modify manager_SSHKEY.json
+If login manager with ssh key, please modify `machine/manager_SSHKEY.json`
 
 An example of manager_SSHKEY.json, please notice that `SudoPassword` is not key password 
 
@@ -76,13 +77,25 @@ An example of manager_SSHKEY.json, please notice that `SudoPassword` is not key 
 * Deploy configuration file to all nodes  in swarm
 
 ```
-./config_deploy.sh
+./config_deploy.sh PATH CONFIG VPS1 VPS2 VPS3 VPS4 
+```
+Such as:
+
+```
+./config_deploy.sh ~/meninasx86/sskcp-server-deployment sskcp_conf manager:22 root@174.35.6.2:22 root@174.35.3.22:22 root@174.35.7.21:22
+
 ```
 
 * Deploy sskcp-server
 
 ```
-./deploy.sh 
+./deploy.sh PATH COMPOSEFILE MANAGERFILE MANAGER
 ```
+Such as:
+
+```
+./deploy.sh ~/meninasx86/sskcp-server-deployment sskcp-server.yml machine/manager_SSHKEY.json manager:22 
+```
+
 
 

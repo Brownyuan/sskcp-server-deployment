@@ -12,9 +12,10 @@
         ]
     },
       {
-        "Topic": "Delete ~/sskcp_conf",
+        "Topic": "Delete ~/sskcp_conf and sskcp-server.yml",
         "Tasks": [
-            "sudo rm -r ~/sskcp_conf"
+            "sudo rm -r ~/sskcp_conf",            
+            "sudo rm -r ~/sskcp-server.yml"
         ]
     },
     {

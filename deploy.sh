@@ -32,6 +32,6 @@ echo "scp docker-compose file to manager"
 scp -P ${PORT} -r ${DIR}/${COMPOSEFILE} ${ser}:~
 
 echo "Deploy ss-kcp"
-./ssh-rpc-agent --mf ${MANAGERFILE} --tf deploy.json
+./ssh-rpc-agent --mf ${MANAGERFILE} --tf tasks/deploy.json
 
 

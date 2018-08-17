@@ -43,6 +43,6 @@ do
 	scp -P ${PORT} -r ${DIR}/${CONFIG} ${ser}:~
 	#echo ${ser}
 	#echo $PORT
-	ssh -p ${PORT} -t ${ser} "sudo mkdir /app_data ;sudo mkdir /app_data/sskcp_conf; sudo cp -r ~/sskcp_conf /app_data/sskcp_conf; sudo tree /app_data ; sudo tree ~;"
+	ssh -p ${PORT} -t ${ser} "sudo mkdir /app_data ;sudo mkdir /app_data/sskcp_conf; sudo cp -r ~/sskcp_conf /app_data; sudo tree /app_data ; sudo tree ~;"
 done
 

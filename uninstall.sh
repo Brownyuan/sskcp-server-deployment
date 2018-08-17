@@ -22,6 +22,6 @@ fi
 
 
 echo "Remove ss-kcp"
-./ssh-rpc-agent --mf ${MANAGERFILE} --tf uninstall.json
+./ssh-rpc-agent --mf ${MANAGERFILE} --tf tasks/uninstall.json
 
 
