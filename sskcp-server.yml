@@ -1,0 +1,38 @@
+version: "3"
+services:
+  sskcpserver1:
+    image: meninasx86/sskcp-server-x86
+    volumes:
+      - "/app_data/sskcp_conf/pair1:/home/sskcpserver"
+      - "/app_data/kcplog/pair1:/home/kcplog"
+    ports:
+      - "4301:4301/udp"
+    deploy:
+      replicas: 4
+  sskcpserver2:
+    image: meninasx86/sskcp-server-x86
+    volumes:
+      - "/app_data/sskcp_conf/pair2:/home/sskcpserver"
+      - "/app_data/kcplog/pair2:/home/kcplog"
+    ports:
+      - "4302:4302/udp"
+    deploy:
+      replicas: 4
+  sskcpserver3:
+    image: meninasx86/sskcp-server-x86
+    volumes:
+      - "/app_data/sskcp_conf/pair3:/home/sskcpserver"
+      - "/app_data/kcplog/pair3:/home/kcplog"
+    ports:
+      - "4303:4303/udp"
+    deploy:
+      replicas: 4
+  sskcpserver4:
+    image: meninasx86/sskcp-server-x86
+    volumes:
+      - "/app_data/sskcp_conf/pair4:/home/sskcpserver"
+      - "/app_data/kcplog/pair4:/home/kcplog"
+    ports:
+      - "4304:4304/udp"
+    deploy:
+      replicas: 4

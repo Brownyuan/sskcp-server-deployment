@@ -1,0 +1,78 @@
+[
+    {
+    	"Topic": "Remove stack",
+    	"Tasks": [
+    		"docker stack rm ss-kcp"
+      	]
+    },
+    {
+        "Topic": "Delete /app_data",
+        "Tasks": [
+            "sudo rm -r /app_data"
+        ]
+    },
+      {
+        "Topic": "Delete ~/sskcp_conf",
+        "Tasks": [
+            "sudo rm -r ~/sskcp_conf"
+        ]
+    },
+    {
+        "Topic": "Check config",
+        "Tasks": [
+            "echo \"==============Check file in root:==============\"",
+            "sudo ls /",
+            "echo \"==============Check file in $HOME:==============\"",
+            "ls ~"
+        ]
+    },
+    {
+        "Topic": "Sleep 20s",
+        "Tasks": [
+            "sleep 30"
+        ]
+    },
+    {
+    	"Topic": "Check stack",
+    	"Tasks": [
+    		"docker stack ls"
+      	]
+    },
+    {
+    	"Topic": "Check service",
+    	"Tasks": [
+    		"docker service ls"
+      	]
+    },
+    {
+    	"Topic": "Check tasks",
+    	"Tasks": [
+    		"docker stack ps ss-kcp"
+      	]
+    },
+    {
+    	"Topic": "Check network",
+    	"Tasks": [
+    		"docker network ls"
+      	]
+    },
+    {
+    	"Topic": "ifconfig",
+    	"Tasks": [
+    		"ifconfig"
+      	]
+    },
+    {
+    	"Topic": "netstat",
+    	"Tasks": [
+    		"sudo netstat -tunpl"
+      	]
+    },
+    {
+    	"Topic": "Check iptables",
+    	"Tasks": [
+    		"sudo iptables -L -nv -t nat"
+      	]
+    }
+
+] 

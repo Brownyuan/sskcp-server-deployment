@@ -1,0 +1,9 @@
+{
+	"server":"0.0.0.0",
+	"server_port":"8304",
+	"password":"key_8304",
+	"timeout":600,
+	"method":"aes-256-cfb",
+	"fast_open": true
+}
+

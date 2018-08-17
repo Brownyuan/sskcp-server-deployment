@@ -1,0 +1,51 @@
+[
+    {
+    	"Topic": "Deploy stack",
+    	"Tasks": [
+    		"docker stack deploy -c ~/sskcp-server.yml ss-kcp"
+      	]
+    },
+    {
+    	"Topic": "Check stack",
+    	"Tasks": [
+    		"docker stack ls"
+      	]
+    },
+    {
+    	"Topic": "Check service",
+    	"Tasks": [
+    		"docker service ls"
+      	]
+    },
+    {
+    	"Topic": "Check tasks",
+    	"Tasks": [
+    		"docker stack ps ss-kcp"
+      	]
+    },
+    {
+    	"Topic": "Check network",
+    	"Tasks": [
+    		"docker network ls"
+      	]
+    },
+    {
+    	"Topic": "ifconfig",
+    	"Tasks": [
+    		"ifconfig"
+      	]
+    },
+    {
+    	"Topic": "netstat",
+    	"Tasks": [
+    		"sudo netstat -tunpl"
+      	]
+    },
+    {
+    	"Topic": "Check iptables",
+    	"Tasks": [
+    		"sudo iptables -L -nv -t nat"
+      	]
+    }
+
+] 

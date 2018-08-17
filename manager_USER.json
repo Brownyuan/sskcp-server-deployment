@@ -1,0 +1,9 @@
+  [
+    {
+    	"Domain": "DOMAIN/IP",
+    	"Port": "PORT",
+    	"Username": "USERNAME",
+    	"SudoPassword": "PASSWORD",
+    	"Mode": "USERPASS"
+    }
+  ] 
