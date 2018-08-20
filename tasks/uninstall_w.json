@@ -1,0 +1,37 @@
+[
+    {
+    	"Topic": "Remove containers, images, networks that is not used",
+    	"Tasks": [
+    		"docker ps -qa -f label=com.docker.swarm.task -f status=exited | xargs docker rm -f"
+      	]
+    },
+    {
+        "Topic": "Delete /app_data",
+        "Tasks": [
+            "sudo rm -r /app_data"
+
+        ]
+    },
+    {
+        "Topic": "Delete ~/sskcp_conf",
+        "Tasks": [
+            "sudo rm -r ~/sskcp_conf"            
+
+        ]
+    },
+    {
+        "Topic": "Check config",
+        "Tasks": [
+            "echo \"==============Check file in root:==============\"",
+            "sudo ls /",
+            "echo \"==============Check file in $HOME:==============\"",
+            "ls ~"
+        ]
+    },
+    {
+    	"Topic": "Check containers",
+    	"Tasks": [
+    		"docker ps -a"
+      	]
+    }
+] 

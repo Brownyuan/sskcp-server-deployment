@@ -82,7 +82,7 @@ An example of manager_SSHKEY.json, please notice that `SudoPassword` is not key 
 Such as:
 
 ```
-./config_deploy.sh ~/meninasx86/sskcp-server-deployment sskcp_conf manager:22 root@174.35.6.2:22 root@174.35.3.22:22 root@174.35.7.21:22
+./config_deploy.sh ~/meninasx86/sskcp-server-deployment/sskcp_conf manager root@174.35.6.2:22 root@174.35.3.22:22 root@174.35.7.21:22
 
 ```
 
@@ -94,7 +94,44 @@ Such as:
 Such as:
 
 ```
-./deploy.sh ~/meninasx86/sskcp-server-deployment sskcp-server.yml machine/manager_SSHKEY.json manager:22 
+./deploy.sh ~/meninasx86/sskcp-server-deployment/sskcp-server.yml machine/manager_SSHKEY.json manager
+```
+
+* Uninstall manager
+
+```
+./ssh-rpc-agent --tf tasks/uninstall_m.json --mf machine/manager_SSHKEY.json
+
+```
+
+* Uninstall worker
+
+Create a `woker.json` file under machine, for example
+
+```
+[
+   {
+        "Label": "aworker",
+        "SudoPassword": "wk123_",
+        "Mode": "SSHKEY"
+    },
+    {
+        "Label": "bworker",
+        "SudoPassword": "wk123_",
+        "Mode": "SSHKEY"
+    },
+    {
+        "Label": "cworker",
+        "SudoPassword": "wk123_",
+        "Mode": "SSHKEY"
+    }
+]
+
+```
+
+```
+./ssh-rpc-agent --tf tasks/uninstall_w.json --mf machine/worker.json
+
 ```
 
 

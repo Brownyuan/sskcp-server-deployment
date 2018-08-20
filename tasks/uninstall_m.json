@@ -19,6 +19,12 @@
         ]
     },
     {
+        "Topic": "Delete exited docker containers",
+        "Tasks": [
+            "docker ps -qa -f label=com.docker.swarm.task -f status=exited | xargs docker rm -f"
+        ]
+    },
+    {
         "Topic": "Check config",
         "Tasks": [
             "echo \"==============Check file in root:==============\"",
@@ -28,7 +34,7 @@
         ]
     },
     {
-        "Topic": "Sleep 20s",
+        "Topic": "Sleep 10s",
         "Tasks": [
             "sleep 30"
         ]
@@ -52,28 +58,15 @@
       	]
     },
     {
+        "Topic": "Check containers",
+        "Tasks": [
+            "docker ps -a"
+        ]
+    },
+    {
     	"Topic": "Check network",
     	"Tasks": [
     		"docker network ls"
       	]
-    },
-    {
-    	"Topic": "ifconfig",
-    	"Tasks": [
-    		"ifconfig"
-      	]
-    },
-    {
-    	"Topic": "netstat",
-    	"Tasks": [
-    		"sudo netstat -tunpl"
-      	]
-    },
-    {
-    	"Topic": "Check iptables",
-    	"Tasks": [
-    		"sudo iptables -L -nv -t nat"
-      	]
     }
-
 ] 

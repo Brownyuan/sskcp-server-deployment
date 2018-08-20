@@ -34,7 +34,7 @@ machine_list=("${machine1}" "${machine2}" "${machine3}" "${machine4}")
 for machine in ${machine_list[@]}
 do
 	flag=`echo $machine|awk '{print match($0,":")}'`;
-	echo $flag
+	#echo $flag
 	if [ $flag -gt 0 ];then
 		PORT=${machine#*:}
 		ser=${machine%:*}
